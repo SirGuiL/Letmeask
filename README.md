@@ -18,6 +18,6 @@
 </ul>
 
 <h3>Novas funcionalidades</h3>
-:black_large_square: react-hot-toast <br>
+:white_check_mark: react-hot-toast <br>
 :black_large_square: react-modal
 
