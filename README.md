@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/">
+  <img src="https://github.com/SirGuiL/Letmeask/blob/main/src/assets/images/logo.svg">
 </p><hr>
 <h2> Site desenvolvido na Next Level Week Together da Rocketseat :rocket: </h2>
 <div style="display: flex; flex-direction: row; align-items: center; justify-content: center;>
