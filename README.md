@@ -18,7 +18,7 @@
 </ul>
 
 <h3>Novas funcionalidades</h3>
-[ ] react-hot-toast
-[ ] react-modal
+- [ ] react-hot-toast
+- [ ] react-modal
 
 
