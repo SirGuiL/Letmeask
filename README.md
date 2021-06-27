@@ -1,7 +1,5 @@
 <p style="background-color: white;" align="center">
-  <div style="background: #fff;">
-    <img src="https://github.com/SirGuiL/Letmeask/blob/main/src/assets/images/logo.svg">
-  </div>
+  <img src="https://github.com/SirGuiL/Letmeask/blob/main/src/assets/images/logo.svg">
 </p><hr>
 <h2> Site desenvolvido na Next Level Week Together da Rocketseat :rocket: </h2>
 <div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
