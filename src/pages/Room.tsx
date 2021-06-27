@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { FormEvent, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 import { Button } from "../components/Button";
 import { RoomCode } from "../components/RoomCode";
@@ -49,6 +50,12 @@ export function Room() {
     await database.ref(`rooms/${roomId}/questions`).push(question);
 
     setNewQuestion("");
+    toast.success("Question sent", {
+      icon: "😃",
+      style: {
+        fontSize: "24px",
+      },
+    });
   }
 
   async function handleLikeQuestion(
@@ -68,6 +75,7 @@ export function Room() {
 
   return (
     <div id="page-room">
+      <Toaster />
       <header>
         <div className="content">
           <img src={logoImg} alt="letmeask" />

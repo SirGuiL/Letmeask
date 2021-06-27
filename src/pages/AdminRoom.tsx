@@ -1,4 +1,5 @@
 import { useHistory, useParams } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 
 import { Button } from "../components/Button";
 import { RoomCode } from "../components/RoomCode";
@@ -26,10 +27,34 @@ export function AdminRoom() {
 
   const roomId = params.id;
 
-  // const { user } = useAuth();
   const { questions, title } = useRoom(roomId);
 
   async function handleEndRoom() {
+    toast(
+      (t) => (
+        <span className="toast-container">
+          Has certainty want to delete the room?
+          <button className="button-toast" onClick={handleDelete}>
+            Yes
+          </button>
+          <button className="button-toast" onClick={() => toast.dismiss(t.id)}>
+            No
+          </button>
+        </span>
+      ),
+      {
+        duration: 3000,
+        icon: "😢",
+        style: {
+          fontSize: "28px",
+          display: "flex",
+          gap: "10px",
+        },
+      }
+    );
+  }
+
+  async function handleDelete() {
     await database.ref(`rooms/${roomId}`).update({
       endedAt: new Date(),
     });
@@ -50,13 +75,44 @@ export function AdminRoom() {
   }
 
   async function handleDeleteQuestion(questionId: string) {
-    if (window.confirm("Tem certeza que deseja excluir essa pergunta?")) {
-      await database.ref(`rooms/${roomId}/questions/${questionId}`).remove();
-    }
+    toast(
+      (t) => (
+        <span className="toast-container">
+          Has certainty want to delete the question?
+          <button
+            className="button-toast"
+            onClick={() => {
+              database.ref(`rooms/${roomId}/questions/${questionId}`).remove();
+              toast.success("Question successfully deleted");
+              toast.dismiss(t.id);
+            }}
+          >
+            Yes
+          </button>
+          <button className="button-toast" onClick={() => toast.dismiss(t.id)}>
+            No
+          </button>
+        </span>
+      ),
+      {
+        duration: 3000,
+        icon: "😢",
+        style: {
+          fontSize: "28px",
+          display: "flex",
+          gap: "10px",
+        },
+      }
+    );
+    // if (window.confirm("Tem certeza que deseja excluir essa pergunta?")) {
+    //   await database.ref(`rooms/${roomId}/questions/${questionId}`).remove();
+    //   toast.success("Question successfully deleted");
+    // }
   }
 
   return (
     <div id="page-room">
+      <Toaster />
       <header>
         <div className="content">
           <img src={logoImg} alt="letmeask" />

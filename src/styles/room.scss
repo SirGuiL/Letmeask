@@ -110,3 +110,39 @@
     }
   }
 }
+
+.toast-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+
+  button {
+    background: #fff;
+    border: 1px solid #835afd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    color: #835afd;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+
+    & + button {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+}
+// .button-toast {
+//   background: transparent;
+//   border: 1px solid #835afd;
+//   border-radius: 5px;
+//   padding: 10px;
+//   font-size: 18px;
+//   color: #835afd;
+//   font-weight: 500;
+//   cursor: pointer;
+// }
