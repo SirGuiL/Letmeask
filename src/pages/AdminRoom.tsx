@@ -104,10 +104,6 @@ export function AdminRoom() {
         },
       }
     );
-    // if (window.confirm("Tem certeza que deseja excluir essa pergunta?")) {
-    //   await database.ref(`rooms/${roomId}/questions/${questionId}`).remove();
-    //   toast.success("Question successfully deleted");
-    // }
   }
 
   return (
