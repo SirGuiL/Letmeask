@@ -2,7 +2,7 @@
   <img src="https://github.com/SirGuiL/Letmeask/blob/main/src/assets/images/logo.svg">
 </p><hr>
 <h2> Site desenvolvido na Next Level Week Together da Rocketseat :rocket: </h2>
-<div style="display: flex; flex-direction: row; align-items: center; justify-content: center;>
+<div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
   <img src="https://github.com/SirGuiL/Letmeask/blob/main/src/assets/images/prints/home.png">
   <img src="https://github.com/SirGuiL/Letmeask/blob/main/src/assets/images/prints/new.png">
   <img src="https://github.com/SirGuiL/Letmeask/blob/main/src/assets/images/prints/admin.png">
@@ -18,6 +18,6 @@
 </ul>
 
 <h3>Novas funcionalidades</h3>
-- [ ] react-hot-toast
-- [ ] react-modal
+:black_large_square: react-hot-toast <br>
+:black_large_square: react-modal
 
